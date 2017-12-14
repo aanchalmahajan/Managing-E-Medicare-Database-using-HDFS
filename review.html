@@ -1,0 +1,66 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/ex.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+<div id="main_container">
+<div class="header">
+<div id="logo"><img src="images/images (12).jpg" alt="" width="162" height="80" border="0" /></div>
+<div class="right_header">
+<div class="top_menu"> <a href="login.html" class="login">login</a> <a href="signup.php" class="sign_up">signup</a> </div>
+<div id="menu">
+<ul>
+<li><a class="current" href="a11.htm">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="healthyliving.html">Healthy Living</a></li>
+<li><a href="#">Review</a></li>
+</ul>
+</div>
+</div>
+<img src="images\home_page_banner_2.png" style="vertical-align:left" width="900" height="200">
+<form action="contactdetails.php" method="post">
+<fieldset>
+<legend><b><h3>Review</h3></b></legend>
+<table cellpadding="3">
+<tr><td><strong>Subject Of Review</strong></td><td><input type="text" name="sub"></td></tr>
+<tr><td></td>
+</tr>
+<tr><td width="150px"><strong>
+Review:
+</td>
+<td>
+<textarea cols="50" rows="5" name="comm">
+</textarea>
+</strong>
+</td>
+</tr>
+</table>
+</fieldset>
+<fieldset>
+<legend><b><h3>Additional Information</h3></b></legend>
+<table cellpadding="3">
+<tr><td><strong>E-mail Id</strong></td><td><input type="email" name="data1"></td></tr>
+<tr><td><strong>First Name</strong></td><td><input type="text" name="data2"></td></tr>
+<tr><td><strong>Last Name</strong></td><td><input type="text" name="data3"></td></tr>
+<tr><td><strong>State</strong></td><td><input type="text" name="data4"></td></tr>
+<tr><td width="150px"><strong>Country</strong></td><td><input type="text" name="data5"></td></tr>
+</table>
+</fieldset>
+<?php
+if(array_key_exists('cumulativeErrorMessage', $_POST) && $_POST['cumulativeErrorMessage'] != '') {
+?>
+<fieldset style="color: #ff0000;">
+<legend>There were errors</legend>
+<?php echo $_POST['cumulativeErrorMessage']?>
+</fieldset>
+<?php
+}
+?>
+<br/>
+<input type="submit" value="Submit">
+</form>
+</div>
+</div>
+</body>
+</html>
